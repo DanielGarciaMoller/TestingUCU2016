@@ -32,19 +32,17 @@ public class  OpenCartDesafio1{
         wd.findElement(By.name("search")).sendKeys("iphone");
         wd.findElement(By.xpath("//span[@class='input-group-btn']/button")).click();
         wd.findElement(By.id("grid-view")).click();
-        if (!wd.findElement(By.tagName("html")).getText().contains("iPhone iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a nam.. $123.20 Ex Tax: $101.00")) {
-            System.out.println("verifyTextPresent failed");
-        }
+ 
         if (!wd.findElement(By.tagName("html")).getText().contains("iPhone")) {
-            System.out.println("verifyTextPresent failed");
+            System.out.println("verifyTextPresent failed1");
         }
-        wd.findElement(By.xpath("//div[@class='image']/a/img")).click();
+ 
         wd.findElement(By.linkText("iPhone")).click();
         if (!wd.findElement(By.tagName("html")).getText().contains("iPhone")) {
-            System.out.println("verifyTextPresent failed");
+            System.out.println("verifyTextPresent failed2");
         }
         if (!wd.findElement(By.tagName("html")).getText().contains("$123.20")) {
-            System.out.println("verifyTextPresent failed");
+            System.out.println("verifyTextPresent failed3");
         }
     }
     
